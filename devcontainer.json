@@ -14,6 +14,5 @@
         "golang.go",
         "766b.go-outliner"
     ],
-    "postCreateCommand": "export PATH=$PATH:/usr/local/go/bin",
     "remoteUser": "vscode"
 }
