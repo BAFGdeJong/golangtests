@@ -17,8 +17,12 @@ EXPOSE 3000
 USER vscode
 WORKDIR /home/vscode
 RUN <<EOF
+cd /usr/local/
 sudo wget https://go.dev/dl/go1.23.6.linux-amd64.tar.gz
-sudo tar -C . -xzf go1.23.6.linux-amd64.tar.gz
+sudo tar -C /usr/local -xzf go1.23.6.linux-amd64.tar.gz
 sudo rm -fr go1.23.6.linux-amd64.tar.gz
-echo "export PATH=$PATH:/home/vscode/go/bin" | sudo tee /etc/profile > /dev/null
+cd /home/vscode
+echo "export PATH=$PATH:/usr/local/go/bin" | sudo tee /etc/profile
+echo "export PATH=$PATH:/usr/local/go/bin" | sudo tee $HOME/.profile
+. /etc/profile
 EOF
