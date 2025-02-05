@@ -14,8 +14,8 @@ wget https://go.dev/dl/go1.23.6.linux-amd64.tar.gz
 tar -C . -xzf go1.23.6.linux-amd64.tar.gz
 echo "export PATH=$PATH:/bin/go/bin" >> /etc/profile
 rm -fr go1.23.6.linux-amd64.tar.gz
-useradd -ms /bin/bash -G sudo vscode
 echo "vscode:pass" | chpasswd
+useradd -ms /bin/bash -G sudo vscode
 EOF
 WORKDIR /home/vscode
 EXPOSE 3000
