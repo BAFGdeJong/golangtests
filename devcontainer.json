@@ -1,0 +1,19 @@
+{
+    "name": "Golang test dev container",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "args": {
+            "VARIANT": "3.8",
+            "INSTALL_NODE": "false"
+        }
+    },
+    "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+    },
+    "extensions": [
+        "golang.go",
+        "766b.go-outliner"
+    ],
+    "postCreateCommand": "export PATH=$PATH:/usr/local/go/bin",
+    "remoteUser": "vscode"
+}
