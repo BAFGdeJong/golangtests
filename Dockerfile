@@ -11,7 +11,7 @@ apt-get install -y sudo
 apt-get install -y whois
 useradd -ms /bin/bash vscode
 usermod -aG sudo vscode
-echo 'vscode ALL=(ALL) NOPASSWD:ALL' >> /etc/sudoers
+echo "vscode ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 EOF
 EXPOSE 3000
 USER vscode

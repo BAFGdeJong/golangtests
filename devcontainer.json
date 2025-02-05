@@ -9,6 +9,5 @@
     "extensions": [
         "golang.go",
         "766b.go-outliner"
-    ],
-    "remoteUser": "vscode"
+    ]
 }
